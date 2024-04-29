@@ -41,6 +41,7 @@
 		E8B1F03F2BD26A9D00EA543E /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F03E2BD26A9D00EA543E /* InputController.swift */; };
 		E8B1F0422BD2800400EA543E /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0412BD2800400EA543E /* Movement.swift */; };
 		E8B1F04B2BD2FD6A00EA543E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F04A2BD2FD6A00EA543E /* GameController.swift */; };
+		E8D32DED2BDF820B004B7934 /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E8D32DEC2BDF820B004B7934 /* image.jpeg */; };
 		E8E7BA942BD3F0100039D16D /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7BA932BD3F0100039D16D /* SceneLighting.swift */; };
 		E8EF09B82BD0E7FE00FFDA9C /* EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B72BD0E7FE00FFDA9C /* EngineApp.swift */; };
 		E8EF09BA2BD0E7FE00FFDA9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B92BD0E7FE00FFDA9C /* ContentView.swift */; };
@@ -88,6 +89,7 @@
 		E8B1F03E2BD26A9D00EA543E /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		E8B1F0412BD2800400EA543E /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		E8B1F04A2BD2FD6A00EA543E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		E8D32DEC2BDF820B004B7934 /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpeg; path = ../../../../Downloads/image.jpeg; sourceTree = "<group>"; };
 		E8E7BA932BD3F0100039D16D /* SceneLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
 		E8E7BA962BD3F56C0039D16D /* Lighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
 		E8EF09B42BD0E7FE00FFDA9C /* Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 		E8EF09BD2BD0E7FF00FFDA9C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E8D32DEC2BDF820B004B7934 /* image.jpeg */,
 				E8EF09BE2BD0E7FF00FFDA9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -339,6 +342,7 @@
 				E81D63312BD41B7000AB2DCD /* Scene.usdz in Resources */,
 				E81D63282BD4193D00AB2DCD /* alarm_clock_01_rough_1k.png in Resources */,
 				E81D632A2BD4193D00AB2DCD /* alarm_clock_01_ao_1k.png in Resources */,
+				E8D32DED2BDF820B004B7934 /* image.jpeg in Resources */,
 				E81D63372BD421DC00AB2DCD /* final-sphere.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
