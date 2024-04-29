@@ -12,6 +12,7 @@ struct EngineApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .navigationTitle("Noname Engine")
         }
     }
 }
