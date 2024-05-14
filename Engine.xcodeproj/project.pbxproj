@@ -11,9 +11,6 @@
 		E81D63142BD3FBEC00AB2DCD /* DebugLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D63132BD3FBEC00AB2DCD /* DebugLights.swift */; };
 		E81D63162BD4030100AB2DCD /* DebugLights.metal in Sources */ = {isa = PBXBuildFile; fileRef = E81D63152BD4030100AB2DCD /* DebugLights.metal */; };
 		E81D63182BD4050C00AB2DCD /* lighting-sphere.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63172BD4050C00AB2DCD /* lighting-sphere.usdz */; };
-		E81D631A2BD40FA600AB2DCD /* starter-sphere.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63192BD40FA600AB2DCD /* starter-sphere.usdz */; };
-		E81D631C2BD4133100AB2DCD /* alarm.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E81D631B2BD4133100AB2DCD /* alarm.usdc */; };
-		E81D631E2BD413E600AB2DCD /* alarm.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D631D2BD413E600AB2DCD /* alarm.usdz */; };
 		E81D63272BD4193D00AB2DCD /* alarm_clock_01_arm_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63202BD4193D00AB2DCD /* alarm_clock_01_arm_1k.png */; };
 		E81D63282BD4193D00AB2DCD /* alarm_clock_01_rough_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63212BD4193D00AB2DCD /* alarm_clock_01_rough_1k.png */; };
 		E81D63292BD4193D00AB2DCD /* alarm_clock_01_metal_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63222BD4193D00AB2DCD /* alarm_clock_01_metal_1k.png */; };
@@ -21,9 +18,11 @@
 		E81D632B2BD4193D00AB2DCD /* alarm_clock_01_nor_gl_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63242BD4193D00AB2DCD /* alarm_clock_01_nor_gl_1k.png */; };
 		E81D632C2BD4193D00AB2DCD /* alarm_clock_01_nor_dx_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63252BD4193D00AB2DCD /* alarm_clock_01_nor_dx_1k.png */; };
 		E81D632D2BD4193D00AB2DCD /* alarm_clock_01_diff_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = E81D63262BD4193D00AB2DCD /* alarm_clock_01_diff_1k.png */; };
-		E81D63312BD41B7000AB2DCD /* Scene.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63302BD41B7000AB2DCD /* Scene.usdz */; };
+		E81D63312BD41B7000AB2DCD /* clock.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63302BD41B7000AB2DCD /* clock.usdz */; };
 		E81D63352BD41E4300AB2DCD /* PBR.metal in Sources */ = {isa = PBXBuildFile; fileRef = E81D63342BD41E4300AB2DCD /* PBR.metal */; };
-		E81D63372BD421DC00AB2DCD /* final-sphere.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63362BD421DC00AB2DCD /* final-sphere.usdz */; };
+		E81D63372BD421DC00AB2DCD /* sphere.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63362BD421DC00AB2DCD /* sphere.usdz */; };
+		E898C8802BEE007700EB573C /* toy.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E898C87F2BEE007700EB573C /* toy.usdz */; };
+		E898C8822BEE06D600EB573C /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E898C8812BEE06D600EB573C /* gramophone.usdz */; };
 		E8B1F0132BD1014900EA543E /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0122BD1014900EA543E /* Math.swift */; };
 		E8B1F0152BD1093900EA543E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0142BD1093900EA543E /* Model.swift */; };
 		E8B1F0172BD1095400EA543E /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0162BD1095400EA543E /* Transform.swift */; };
@@ -32,16 +31,14 @@
 		E8B1F01D2BD1B2B100EA543E /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F01C2BD1B2B100EA543E /* Primitive.swift */; };
 		E8B1F01F2BD1B82B00EA543E /* Fragment.metal in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F01E2BD1B82B00EA543E /* Fragment.metal */; };
 		E8B1F0222BD1B97D00EA543E /* Vertex.metal in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0212BD1B97D00EA543E /* Vertex.metal */; };
-		E8B1F0292BD1C77800EA543E /* skull.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E8B1F0282BD1C77800EA543E /* skull.usdc */; };
 		E8B1F0332BD24A8100EA543E /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0322BD24A8100EA543E /* TextureController.swift */; };
-		E8B1F0372BD253D300EA543E /* better_skull.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E8B1F0362BD253D300EA543E /* better_skull.usdz */; };
+		E8B1F0372BD253D300EA543E /* skull.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E8B1F0362BD253D300EA543E /* skull.usdz */; };
 		E8B1F0392BD2582F00EA543E /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B1F0382BD2582F00EA543E /* Textures.xcassets */; };
 		E8B1F03B2BD262EA00EA543E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F03A2BD262EA00EA543E /* GameScene.swift */; };
 		E8B1F03D2BD2664800EA543E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F03C2BD2664800EA543E /* Camera.swift */; };
 		E8B1F03F2BD26A9D00EA543E /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F03E2BD26A9D00EA543E /* InputController.swift */; };
 		E8B1F0422BD2800400EA543E /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0412BD2800400EA543E /* Movement.swift */; };
 		E8B1F04B2BD2FD6A00EA543E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F04A2BD2FD6A00EA543E /* GameController.swift */; };
-		E8D32DED2BDF820B004B7934 /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E8D32DEC2BDF820B004B7934 /* image.jpeg */; };
 		E8E7BA942BD3F0100039D16D /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7BA932BD3F0100039D16D /* SceneLighting.swift */; };
 		E8EF09B82BD0E7FE00FFDA9C /* EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B72BD0E7FE00FFDA9C /* EngineApp.swift */; };
 		E8EF09BA2BD0E7FE00FFDA9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B92BD0E7FE00FFDA9C /* ContentView.swift */; };
@@ -51,6 +48,8 @@
 		E8EF09CB2BD0EAF100FFDA9C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09CA2BD0EAF100FFDA9C /* Renderer.swift */; };
 		E8EF09CD2BD0EE2000FFDA9C /* ShaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09CC2BD0EE2000FFDA9C /* ShaderManager.swift */; };
 		E8EF09D12BD0F1CA00FFDA9C /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09D02BD0F1CA00FFDA9C /* VertexDescriptor.swift */; };
+		E8F416432BF0AA22004A3BAE /* ForwardRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F416422BF0AA22004A3BAE /* ForwardRenderPass.swift */; };
+		E8F416452BF0AA88004A3BAE /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F416442BF0AA88004A3BAE /* Pipelines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +57,6 @@
 		E81D63132BD3FBEC00AB2DCD /* DebugLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLights.swift; sourceTree = "<group>"; };
 		E81D63152BD4030100AB2DCD /* DebugLights.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DebugLights.metal; sourceTree = "<group>"; };
 		E81D63172BD4050C00AB2DCD /* lighting-sphere.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "lighting-sphere.usdz"; sourceTree = "<group>"; };
-		E81D63192BD40FA600AB2DCD /* starter-sphere.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "starter-sphere.usdz"; sourceTree = "<group>"; };
-		E81D631B2BD4133100AB2DCD /* alarm.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.usdc; sourceTree = "<group>"; };
-		E81D631D2BD413E600AB2DCD /* alarm.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = alarm.usdz; sourceTree = "<group>"; };
 		E81D63202BD4193D00AB2DCD /* alarm_clock_01_arm_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_arm_1k.png; sourceTree = "<group>"; };
 		E81D63212BD4193D00AB2DCD /* alarm_clock_01_rough_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_rough_1k.png; sourceTree = "<group>"; };
 		E81D63222BD4193D00AB2DCD /* alarm_clock_01_metal_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_metal_1k.png; sourceTree = "<group>"; };
@@ -68,9 +64,11 @@
 		E81D63242BD4193D00AB2DCD /* alarm_clock_01_nor_gl_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_nor_gl_1k.png; sourceTree = "<group>"; };
 		E81D63252BD4193D00AB2DCD /* alarm_clock_01_nor_dx_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_nor_dx_1k.png; sourceTree = "<group>"; };
 		E81D63262BD4193D00AB2DCD /* alarm_clock_01_diff_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_clock_01_diff_1k.png; sourceTree = "<group>"; };
-		E81D63302BD41B7000AB2DCD /* Scene.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Scene.usdz; sourceTree = "<group>"; };
+		E81D63302BD41B7000AB2DCD /* clock.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = clock.usdz; sourceTree = "<group>"; };
 		E81D63342BD41E4300AB2DCD /* PBR.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PBR.metal; sourceTree = "<group>"; };
-		E81D63362BD421DC00AB2DCD /* final-sphere.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "final-sphere.usdz"; sourceTree = "<group>"; };
+		E81D63362BD421DC00AB2DCD /* sphere.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sphere.usdz; sourceTree = "<group>"; };
+		E898C87F2BEE007700EB573C /* toy.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy.usdz; sourceTree = "<group>"; };
+		E898C8812BEE06D600EB573C /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 		E8B1F0122BD1014900EA543E /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		E8B1F0142BD1093900EA543E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E8B1F0162BD1095400EA543E /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
@@ -80,16 +78,14 @@
 		E8B1F01E2BD1B82B00EA543E /* Fragment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Fragment.metal; sourceTree = "<group>"; };
 		E8B1F0202BD1B8A400EA543E /* ShaderDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefs.h; sourceTree = "<group>"; };
 		E8B1F0212BD1B97D00EA543E /* Vertex.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vertex.metal; sourceTree = "<group>"; };
-		E8B1F0282BD1C77800EA543E /* skull.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull.usdc; sourceTree = "<group>"; };
 		E8B1F0322BD24A8100EA543E /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
-		E8B1F0362BD253D300EA543E /* better_skull.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = better_skull.usdz; sourceTree = "<group>"; };
+		E8B1F0362BD253D300EA543E /* skull.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skull.usdz; sourceTree = "<group>"; };
 		E8B1F0382BD2582F00EA543E /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
 		E8B1F03A2BD262EA00EA543E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E8B1F03C2BD2664800EA543E /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		E8B1F03E2BD26A9D00EA543E /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		E8B1F0412BD2800400EA543E /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		E8B1F04A2BD2FD6A00EA543E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		E8D32DEC2BDF820B004B7934 /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpeg; path = ../../../../Downloads/image.jpeg; sourceTree = "<group>"; };
 		E8E7BA932BD3F0100039D16D /* SceneLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
 		E8E7BA962BD3F56C0039D16D /* Lighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
 		E8EF09B42BD0E7FE00FFDA9C /* Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +99,8 @@
 		E8EF09CC2BD0EE2000FFDA9C /* ShaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderManager.swift; sourceTree = "<group>"; };
 		E8EF09D02BD0F1CA00FFDA9C /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 		E8EF09D32BD0F6AE00FFDA9C /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		E8F416422BF0AA22004A3BAE /* ForwardRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardRenderPass.swift; sourceTree = "<group>"; };
+		E8F416442BF0AA88004A3BAE /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +128,15 @@
 			path = Textures;
 			sourceTree = "<group>";
 		};
+		E898C88E2BEE0A2500EB573C /* Render Passes */ = {
+			isa = PBXGroup;
+			children = (
+				E8F416422BF0AA22004A3BAE /* ForwardRenderPass.swift */,
+				E8F416442BF0AA88004A3BAE /* Pipelines.swift */,
+			);
+			path = "Render Passes";
+			sourceTree = "<group>";
+		};
 		E8B1F0112BD1011900EA543E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,14 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				E81D631F2BD4193000AB2DCD /* Textures */,
-				E81D631D2BD413E600AB2DCD /* alarm.usdz */,
-				E81D63362BD421DC00AB2DCD /* final-sphere.usdz */,
-				E81D631B2BD4133100AB2DCD /* alarm.usdc */,
-				E81D63302BD41B7000AB2DCD /* Scene.usdz */,
-				E81D63192BD40FA600AB2DCD /* starter-sphere.usdz */,
+				E81D63362BD421DC00AB2DCD /* sphere.usdz */,
+				E81D63302BD41B7000AB2DCD /* clock.usdz */,
+				E898C8812BEE06D600EB573C /* gramophone.usdz */,
+				E898C87F2BEE007700EB573C /* toy.usdz */,
 				E81D63172BD4050C00AB2DCD /* lighting-sphere.usdz */,
-				E8B1F0282BD1C77800EA543E /* skull.usdc */,
-				E8B1F0362BD253D300EA543E /* better_skull.usdz */,
+				E8B1F0362BD253D300EA543E /* skull.usdz */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,8 +197,8 @@
 			children = (
 				E8B1F04A2BD2FD6A00EA543E /* GameController.swift */,
 				E8EF09CA2BD0EAF100FFDA9C /* Renderer.swift */,
-				E8E7BA932BD3F0100039D16D /* SceneLighting.swift */,
 				E8B1F03A2BD262EA00EA543E /* GameScene.swift */,
+				E8E7BA932BD3F0100039D16D /* SceneLighting.swift */,
 				E8B1F03C2BD2664800EA543E /* Camera.swift */,
 				E8EF09CC2BD0EE2000FFDA9C /* ShaderManager.swift */,
 			);
@@ -219,6 +224,7 @@
 		E8EF09B62BD0E7FE00FFDA9C /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				E898C88E2BEE0A2500EB573C /* Render Passes */,
 				E8E7BA922BD3ECD60039D16D /* Game */,
 				E8B1F0402BD27FEC00EA543E /* Controls */,
 				E8B1F0302BD249C200EA543E /* Texture */,
@@ -238,7 +244,6 @@
 		E8EF09BD2BD0E7FF00FFDA9C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E8D32DEC2BDF820B004B7934 /* image.jpeg */,
 				E8EF09BE2BD0E7FF00FFDA9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -325,25 +330,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B1F0292BD1C77800EA543E /* skull.usdc in Resources */,
-				E81D631E2BD413E600AB2DCD /* alarm.usdz in Resources */,
-				E8B1F0372BD253D300EA543E /* better_skull.usdz in Resources */,
+				E8B1F0372BD253D300EA543E /* skull.usdz in Resources */,
 				E8EF09BF2BD0E7FF00FFDA9C /* Preview Assets.xcassets in Resources */,
 				E81D63272BD4193D00AB2DCD /* alarm_clock_01_arm_1k.png in Resources */,
+				E898C8822BEE06D600EB573C /* gramophone.usdz in Resources */,
 				E8B1F0392BD2582F00EA543E /* Textures.xcassets in Resources */,
-				E81D631C2BD4133100AB2DCD /* alarm.usdc in Resources */,
 				E81D63292BD4193D00AB2DCD /* alarm_clock_01_metal_1k.png in Resources */,
 				E81D632D2BD4193D00AB2DCD /* alarm_clock_01_diff_1k.png in Resources */,
 				E81D63182BD4050C00AB2DCD /* lighting-sphere.usdz in Resources */,
 				E81D632C2BD4193D00AB2DCD /* alarm_clock_01_nor_dx_1k.png in Resources */,
-				E81D631A2BD40FA600AB2DCD /* starter-sphere.usdz in Resources */,
 				E81D632B2BD4193D00AB2DCD /* alarm_clock_01_nor_gl_1k.png in Resources */,
 				E8EF09BC2BD0E7FF00FFDA9C /* Assets.xcassets in Resources */,
-				E81D63312BD41B7000AB2DCD /* Scene.usdz in Resources */,
+				E81D63312BD41B7000AB2DCD /* clock.usdz in Resources */,
 				E81D63282BD4193D00AB2DCD /* alarm_clock_01_rough_1k.png in Resources */,
 				E81D632A2BD4193D00AB2DCD /* alarm_clock_01_ao_1k.png in Resources */,
-				E8D32DED2BDF820B004B7934 /* image.jpeg in Resources */,
-				E81D63372BD421DC00AB2DCD /* final-sphere.usdz in Resources */,
+				E81D63372BD421DC00AB2DCD /* sphere.usdz in Resources */,
+				E898C8802BEE007700EB573C /* toy.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +358,13 @@
 			files = (
 				E8B1F0152BD1093900EA543E /* Model.swift in Sources */,
 				E81D63142BD3FBEC00AB2DCD /* DebugLights.swift in Sources */,
+				E8F416432BF0AA22004A3BAE /* ForwardRenderPass.swift in Sources */,
 				E8B1F0192BD1134000EA543E /* Mesh.swift in Sources */,
 				E8EF09D12BD0F1CA00FFDA9C /* VertexDescriptor.swift in Sources */,
 				E81D63162BD4030100AB2DCD /* DebugLights.metal in Sources */,
 				E8B1F0172BD1095400EA543E /* Transform.swift in Sources */,
 				E8B1F03F2BD26A9D00EA543E /* InputController.swift in Sources */,
+				E8F416452BF0AA88004A3BAE /* Pipelines.swift in Sources */,
 				E8B1F01F2BD1B82B00EA543E /* Fragment.metal in Sources */,
 				E8EF09CB2BD0EAF100FFDA9C /* Renderer.swift in Sources */,
 				E8B1F0422BD2800400EA543E /* Movement.swift in Sources */,
@@ -506,8 +510,10 @@
 		E8EF09C42BD0E7FF00FFDA9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = IOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Engine/Engine.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +531,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Andrii.Engine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = Engine/Shaders/Common.h;
 				SWIFT_VERSION = 5.0;
@@ -534,8 +542,10 @@
 		E8EF09C52BD0E7FF00FFDA9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = IOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Engine/Engine.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +563,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Andrii.Engine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = Engine/Shaders/Common.h;
 				SWIFT_VERSION = 5.0;
