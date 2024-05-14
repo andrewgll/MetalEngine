@@ -30,14 +30,9 @@ extension GameController: MTKViewDelegate {
         renderer.mtkView(view, drawableSizeWillChange: size)
     }
     func draw(in view: MTKView) {
-//        let currentTime = CFAbsoluteTimeGetCurrent()
-        
         let currentTime = Date()
-//        let deltaTime = (currentTime - lastTime)
         let deltaTime = currentTime.timeIntervalSince(lastTime)
         lastTime = currentTime
-        scene.timer = currentTime.timeIntervalSince1970
-        renderer.uniforms.timer = Float(sin(currentTime.timeIntervalSince1970))
         scene.update(deltaTime: Float(deltaTime))
         renderer.draw(scene: scene, in: view)
     }

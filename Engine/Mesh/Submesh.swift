@@ -11,6 +11,9 @@ struct Submesh{
     struct Textures {
         var baseColor: MTLTexture?
         var roughness: MTLTexture?
+        var normal: MTLTexture?
+        var metallic: MTLTexture?
+        var ambientOcclusion: MTLTexture?
     }
     
     var textures: Textures
@@ -38,7 +41,9 @@ private extension Submesh.Textures {
     init(material: MDLMaterial?) {
         baseColor = material?.texture(type: .baseColor)
         roughness = material?.texture(type: .roughness)
-
+        normal = material?.texture(type: .tangentSpaceNormal)
+        metallic = material?.texture(type: .metallic)
+        ambientOcclusion = material?.texture(type: .ambientOcclusion)
     }
 }
 

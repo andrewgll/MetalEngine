@@ -12,16 +12,18 @@ class Model: Transformable{
     var meshes: [Mesh] = []
     var name: String = "Untitled"
     var tiling: UInt32 = 1
+    var objectId: UInt32 = 0
     
     init() {}
     
-    init(name: String) {
+    init(name: String, objectId: UInt32 = 0) {
         guard let assertUrl = Bundle.main.url(
             forResource: name,
             withExtension: nil
         ) else {
             fatalError("Model: \(name) not found")
         }
+        self.objectId = objectId
         let allocator = MTKMeshBufferAllocator(device: Renderer.device)
         let asset = MDLAsset(
             url: assertUrl,
@@ -29,8 +31,26 @@ class Model: Transformable{
             bufferAllocator: allocator
         )
         asset.loadTextures()
-        let (mdlMeshes, mtkMeshes) = try! MTKMesh.newMeshes(asset: asset,
-                                                            device: Renderer.device)
+        
+        var mtkMeshes: [MTKMesh] = []
+        let mdlMeshes =
+          asset.childObjects(of: MDLMesh.self) as? [MDLMesh] ?? []
+        _ = mdlMeshes.map { mdlMesh in
+            
+            mdlMesh.addTangentBasis(
+              forTextureCoordinateAttributeNamed:
+                MDLVertexAttributeTextureCoordinate,
+              tangentAttributeNamed: MDLVertexAttributeTangent,
+              bitangentAttributeNamed: MDLVertexAttributeBitangent)
+
+            mtkMeshes.append(
+              try! MTKMesh(
+                mesh: mdlMesh,
+                device: Renderer.device))
+          }
+        
+        
+
         meshes = zip(mdlMeshes, mtkMeshes).map {
             Mesh(mdlMesh: $0.0, mtkMesh: $0.1)
         }
@@ -48,6 +68,7 @@ extension Model {
         var uniforms = vertex
         var params = fragment
         params.tiling = tiling
+        params.objectId = objectId
         
         uniforms.modelMatrix = transform.modelMatrix
         uniforms.normalMatrix = uniforms.modelMatrix.upperLeft
@@ -68,15 +89,25 @@ extension Model {
                     index: index)
             }
             for submesh in mesh.submeshes {
-                encoder.setFragmentTexture(submesh.textures.baseColor, index: BaseColor.index)
-                
                 var material = submesh.material
                 
                 encoder.setFragmentBytes(&material, length: MemoryLayout<Material>.stride, index: MaterialBuffer.index)
                 
+                encoder.setFragmentTexture(submesh.textures.baseColor, index: BaseColor.index)
+                
+                encoder.setFragmentTexture(submesh.textures.normal, index: NormalTexture.index)
+                
                 encoder.setFragmentTexture(
                   submesh.textures.roughness,
                   index: RoughnessTexture.index)
+                
+                encoder.setFragmentTexture(
+                    submesh.textures.metallic,
+                  index: MetallicTexture.index)
+                
+                encoder.setFragmentTexture(
+                    submesh.textures.ambientOcclusion,
+                  index: AOTexture.index)
 
                 encoder.drawIndexedPrimitives(
                   type: .triangle,

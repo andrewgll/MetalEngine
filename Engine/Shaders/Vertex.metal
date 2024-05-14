@@ -21,7 +21,9 @@ vertex VertexOut vertex_main(VertexIn in [[stage_in]],
         .normal = in.normal,
         .uv = in.uv,
         .worldPosition = worldPosition.xyz / worldPosition.w,
-        .worldNormal = uniforms.normalMatrix * in.normal
+        .worldNormal = uniforms.normalMatrix * in.normal,
+        .worldTangent = uniforms.normalMatrix * in.tangent,
+        .worldBitangent = uniforms.normalMatrix * in.bitangent
     };
     return out;
 }

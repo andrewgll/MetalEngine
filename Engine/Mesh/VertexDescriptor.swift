@@ -41,6 +41,11 @@ extension MDLVertexDescriptor {
         )
         vertexDescriptor.layouts[UVBuffer.index] = MDLVertexBufferLayout(stride: MemoryLayout<SIMD2<Float>>.stride)
         
+        vertexDescriptor.attributes[Tangent.index] = MDLVertexAttribute(name: MDLVertexAttributeTangent, format: .float3, offset: 0, bufferIndex: TangentBuffer.index)
+        vertexDescriptor.layouts[TangentBuffer.index] = MDLVertexBufferLayout(stride: MemoryLayout<float3>.stride)
+        vertexDescriptor.attributes[Bitangent.index] = MDLVertexAttribute(name: MDLVertexAttributeTangent, format: .float3, offset: 0, bufferIndex: BitangentBuffer.index)
+        vertexDescriptor.layouts[BitangentBuffer.index] = MDLVertexBufferLayout(stride: MemoryLayout<float3>.stride)
+        
         return vertexDescriptor
     }
 }

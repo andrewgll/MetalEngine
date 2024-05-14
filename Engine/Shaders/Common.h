@@ -33,6 +33,10 @@ typedef struct {
     float timer;
     uint lightCount;
     vector_float3 cameraPosition;
+    uint objectId;
+    uint touchX;
+    uint touchY;
+    float scaleFactor;
 } Params;
 
 typedef struct{
@@ -45,17 +49,21 @@ typedef struct{
 typedef enum {
     VertexBuffer = 0,
     UVBuffer = 1,
+    TangentBuffer = 2,
+    BitangentBuffer = 3,
     UniformsBuffer = 11,
     ParamsBuffer = 12,
-    TimerBuffer = 13,
-    LightBuffer = 14,
-    MaterialBuffer = 15
+    LightBuffer = 13,
+    MaterialBuffer = 14,
+    TimerBuffer = 15
 } BufferIndices;
 
 typedef enum {
     Position = 0,
     Normal = 1,
-    UV = 2
+    UV = 2,
+    Tangent = 3,
+    Bitangent = 4
 } Attributes;
 
 typedef enum {

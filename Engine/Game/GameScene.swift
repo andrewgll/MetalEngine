@@ -15,39 +15,52 @@ struct GameScene{
     lazy var ground: Model = {
         let ground = Model(name: "ground", primitiveType: .plane)
         ground.setTexture(name: "Desert", type: BaseColor)
-        ground.tiling = 16
-        ground.transform.scale = 40
+        ground.tiling = 64
+        ground.transform.scale = 400
         ground.transform.rotation.z = Float(-90).degreesToRadians
         return ground
     }()
     
     var models: [Model] = []
-    var camera = PlayerCamera()
+    var camera = ArcballCamera()
+    
+    var defaultView: Transform {
+      Transform(
+        position: [3.2, 3.1, 1.0],
+        rotation: [-0.6, 10.7, 0.0])
+    }
     
     var timer: Double = 0
     
     init(){
-        camera.position = [0, 1.5, -4.0]
+        camera.transform = defaultView
+        camera.target = [0, 1, 0]
+        camera.distance = 4
         
-        models.append(ground)
-        let numberOfModels = 20
-        let radius: Float = 5.0
-        let angleStep = 360.0 / Float(numberOfModels)
-
-        for i in 0..<numberOfModels {
-            
-            let skull = Model(name: "better_skull.usdz")
-            let angle = Float(i) * angleStep.degreesToRadians
-            
-            skull.transform.position.x = cos(angle) * radius
-            skull.transform.position.z = sin(angle) * radius
-            skull.transform.position.y = 0.8
-//            skull.transform.rotation.x = Float(90).degreesToRadians
-            
-            skull.transform.scale = 0.5
-
-            models.append(skull)
-         }
+        let model = Model(name: "toy.usdz")
+        model.transform.position = [0,-1,0]
+        model.transform.scale = 0.2
+        model.transform.rotation.y = Float(-120).degreesToRadians
+        models.append(model)
+//        models.append(ground)
+//        let numberOfModels = 2
+//        let radius: Float = 5.0
+//        let angleStep = 360.0 / Float(numberOfModels)
+//        let names = ["toy.usdz"]
+//        for i in 0..<numberOfModels {
+//            
+//            let model = Model(name: names[i%names.count])
+//            let angle = Float(i) * angleStep.degreesToRadians
+//            
+//            model.transform.position.x = cos(angle) * radius
+//            model.transform.position.z = sin(angle) * radius
+//            model.transform.position.y = 0.8
+//            model.transform.rotation.y = sin(angle) * radius
+//            
+//            model.transform.scale = 0.1
+//
+//            models.append(model)
+//         }
         
     }
     
@@ -58,10 +71,10 @@ struct GameScene{
     mutating func update(deltaTime: Float){
         
         camera.update(deltaTime: deltaTime)
-        let rotationSpeed: Float = 1.0 * deltaTime // Adjust speed as necessary
+        let rotationSpeed: Float = 0.5 * deltaTime // Adjust speed as necessary
         for i in 0..<models.count {
             if(models[i].name != "ground"){
-                models[i].rotation.y += rotationSpeed
+//                models[i].rotation.y += rotationSpeed
             }
         }
         if InputController.shared.keyJustPressed(.keyH) {

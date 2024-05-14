@@ -14,6 +14,18 @@ class InputController {
     var leftMouseDown = false
     var mouseDelta = Point.zero
     var mouseScroll = Point.zero
+    var touchLocation: CGPoint?
+    var touchDelta: CGSize? {
+      didSet {
+        touchDelta?.height *= -1
+        if let delta = touchDelta {
+          mouseDelta = Point(x: Float(delta.width), y: Float(delta.height))
+        }
+        leftMouseDown = touchDelta != nil
+      }
+    }
+
+
 
     private init() {
         setupKeyboardObservers()
@@ -36,9 +48,10 @@ class InputController {
                 }
             }
         }
-        NSEvent.addLocalMonitorForEvents(matching: [.keyUp, .keyDown]) {
-            _ in nil
-        }
+    #if os(macOS)
+      NSEvent.addLocalMonitorForEvents(
+        matching: [.keyUp, .keyDown]) { _ in nil }
+    #endif
     }
 
     private func setupMouseObservers() {
