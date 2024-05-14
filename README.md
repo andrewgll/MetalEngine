@@ -6,6 +6,6 @@ Support for IOS devices. I added fully working PBR(Physically based rendering). 
 Coming soon: item selection, shadows, etc..
 
 
-<img src="https://i.ibb.co/NSyH956/image.jpg" width="48">
-<img src="https://i.ibb.co/s5s8Zyj/photo-5339390260649515280-w.jpg" width="48">
+<img src="https://i.ibb.co/NSyH956/image.jpg" width="500">
+<img src="https://i.ibb.co/s5s8Zyj/photo-5339390260649515280-w.jpg" width="500">
 
