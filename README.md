@@ -9,7 +9,7 @@ This is my playground for my future diploma thesis where I want to investigate t
 
 
 **UPDATE 0.3**
-* Added Item selection
+* Object selection
 * Render passes
 * Object Ids
 <img src="https://i.ibb.co/rv6mYRB/2648172d-4bba-4545-b04b-1e5d25a82a15.jpg" width="500">
