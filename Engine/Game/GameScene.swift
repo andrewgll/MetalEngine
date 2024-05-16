@@ -8,6 +8,8 @@
 import MetalKit
 
 struct GameScene{
+    static var objectId: UInt32 = 1
+    
     var renderFillMode: MTLTriangleFillMode = .fill
     
     let lighting = SceneLighting()
@@ -21,8 +23,18 @@ struct GameScene{
         return ground
     }()
     
+    lazy var toy_model: Model = {
+        let toy = createModel(name: "toy.usdz")
+        
+        toy.transform.position = [0,0,0]
+        toy.transform.scale = 0.2
+        toy.transform.rotation.y = Float(-120).degreesToRadians
+        
+        return toy
+    }()
+    
     var models: [Model] = []
-    var camera = ArcballCamera()
+    var camera = PlayerCamera()
     
     var defaultView: Transform {
       Transform(
@@ -33,35 +45,36 @@ struct GameScene{
     var timer: Double = 0
     
     init(){
-        camera.transform = defaultView
-        camera.target = [0, 1, 0]
-        camera.distance = 4
+        camera.transform.position = [0, 1, 0]
+//        camera.target = [0, 1, 0]
+//        camera.distance = 4
         
-        let model = Model(name: "toy.usdz")
-        model.transform.position = [0,-1,0]
-        model.transform.scale = 0.2
-        model.transform.rotation.y = Float(-120).degreesToRadians
-        models.append(model)
-//        models.append(ground)
-//        let numberOfModels = 2
-//        let radius: Float = 5.0
-//        let angleStep = 360.0 / Float(numberOfModels)
-//        let names = ["toy.usdz"]
-//        for i in 0..<numberOfModels {
-//            
-//            let model = Model(name: names[i%names.count])
-//            let angle = Float(i) * angleStep.degreesToRadians
-//            
-//            model.transform.position.x = cos(angle) * radius
-//            model.transform.position.z = sin(angle) * radius
-//            model.transform.position.y = 0.8
-//            model.transform.rotation.y = sin(angle) * radius
-//            
-//            model.transform.scale = 0.1
-//
-//            models.append(model)
-//         }
+        models.append(toy_model)
+        models.append(ground)
+        let numberOfModels = 5
+        let radius: Float = 5.0
+        let angleStep = 360.0 / Float(numberOfModels)
+        let names = ["sphere.usdz"]
+        for i in 0..<numberOfModels {
+            
+            let model = createModel(name: names[i%names.count])
+            let angle = Float(i) * angleStep.degreesToRadians
+            
+            model.transform.position.x = cos(angle) * radius
+            model.transform.position.z = sin(angle) * radius
+            model.transform.position.y = 0.8
+            model.transform.rotation.y = sin(angle) * radius
+            
+            model.transform.scale = 1
+
+            models.append(model)
+         }
         
+    }
+    func createModel(name: String) -> Model {
+        let model = Model(name: name, objectId: Self.objectId)
+        Self.objectId += 1
+        return model
     }
     
     mutating func update(size: CGSize) {
@@ -74,7 +87,7 @@ struct GameScene{
         let rotationSpeed: Float = 0.5 * deltaTime // Adjust speed as necessary
         for i in 0..<models.count {
             if(models[i].name != "ground"){
-//                models[i].rotation.y += rotationSpeed
+                models[i].rotation.y += rotationSpeed
             }
         }
         if InputController.shared.keyJustPressed(.keyH) {

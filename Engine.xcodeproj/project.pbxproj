@@ -21,6 +21,8 @@
 		E81D63312BD41B7000AB2DCD /* clock.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63302BD41B7000AB2DCD /* clock.usdz */; };
 		E81D63352BD41E4300AB2DCD /* PBR.metal in Sources */ = {isa = PBXBuildFile; fileRef = E81D63342BD41E4300AB2DCD /* PBR.metal */; };
 		E81D63372BD421DC00AB2DCD /* sphere.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E81D63362BD421DC00AB2DCD /* sphere.usdz */; };
+		E88B3E5C2BF33882007748F6 /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B3E5B2BF33882007748F6 /* RenderPass.swift */; };
+		E88B3E5E2BF33951007748F6 /* ObjectIdRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B3E5D2BF33951007748F6 /* ObjectIdRenderPass.swift */; };
 		E898C8802BEE007700EB573C /* toy.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E898C87F2BEE007700EB573C /* toy.usdz */; };
 		E898C8822BEE06D600EB573C /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E898C8812BEE06D600EB573C /* gramophone.usdz */; };
 		E8B1F0132BD1014900EA543E /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0122BD1014900EA543E /* Math.swift */; };
@@ -39,6 +41,7 @@
 		E8B1F03F2BD26A9D00EA543E /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F03E2BD26A9D00EA543E /* InputController.swift */; };
 		E8B1F0422BD2800400EA543E /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F0412BD2800400EA543E /* Movement.swift */; };
 		E8B1F04B2BD2FD6A00EA543E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B1F04A2BD2FD6A00EA543E /* GameController.swift */; };
+		E8E2C8582BF5DE3B002B711B /* ObjecId.metal in Sources */ = {isa = PBXBuildFile; fileRef = E8E2C8572BF5DE3B002B711B /* ObjecId.metal */; };
 		E8E7BA942BD3F0100039D16D /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7BA932BD3F0100039D16D /* SceneLighting.swift */; };
 		E8EF09B82BD0E7FE00FFDA9C /* EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B72BD0E7FE00FFDA9C /* EngineApp.swift */; };
 		E8EF09BA2BD0E7FE00FFDA9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF09B92BD0E7FE00FFDA9C /* ContentView.swift */; };
@@ -67,6 +70,8 @@
 		E81D63302BD41B7000AB2DCD /* clock.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = clock.usdz; sourceTree = "<group>"; };
 		E81D63342BD41E4300AB2DCD /* PBR.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PBR.metal; sourceTree = "<group>"; };
 		E81D63362BD421DC00AB2DCD /* sphere.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sphere.usdz; sourceTree = "<group>"; };
+		E88B3E5B2BF33882007748F6 /* RenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPass.swift; sourceTree = "<group>"; };
+		E88B3E5D2BF33951007748F6 /* ObjectIdRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectIdRenderPass.swift; sourceTree = "<group>"; };
 		E898C87F2BEE007700EB573C /* toy.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy.usdz; sourceTree = "<group>"; };
 		E898C8812BEE06D600EB573C /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 		E8B1F0122BD1014900EA543E /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		E8B1F03E2BD26A9D00EA543E /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		E8B1F0412BD2800400EA543E /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		E8B1F04A2BD2FD6A00EA543E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		E8E2C8572BF5DE3B002B711B /* ObjecId.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ObjecId.metal; sourceTree = "<group>"; };
 		E8E7BA932BD3F0100039D16D /* SceneLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
 		E8E7BA962BD3F56C0039D16D /* Lighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
 		E8EF09B42BD0E7FE00FFDA9C /* Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				E8F416422BF0AA22004A3BAE /* ForwardRenderPass.swift */,
+				E88B3E5B2BF33882007748F6 /* RenderPass.swift */,
+				E88B3E5D2BF33951007748F6 /* ObjectIdRenderPass.swift */,
 				E8F416442BF0AA88004A3BAE /* Pipelines.swift */,
 			);
 			path = "Render Passes";
@@ -265,6 +273,7 @@
 				E8B1F0202BD1B8A400EA543E /* ShaderDefs.h */,
 				E8E7BA962BD3F56C0039D16D /* Lighting.h */,
 				E8B1F01E2BD1B82B00EA543E /* Fragment.metal */,
+				E8E2C8572BF5DE3B002B711B /* ObjecId.metal */,
 				E8B1F0212BD1B97D00EA543E /* Vertex.metal */,
 				E81D63112BD3F9D300AB2DCD /* Lighting.metal */,
 				E81D63342BD41E4300AB2DCD /* PBR.metal */,
@@ -366,6 +375,7 @@
 				E8B1F03F2BD26A9D00EA543E /* InputController.swift in Sources */,
 				E8F416452BF0AA88004A3BAE /* Pipelines.swift in Sources */,
 				E8B1F01F2BD1B82B00EA543E /* Fragment.metal in Sources */,
+				E88B3E5C2BF33882007748F6 /* RenderPass.swift in Sources */,
 				E8EF09CB2BD0EAF100FFDA9C /* Renderer.swift in Sources */,
 				E8B1F0422BD2800400EA543E /* Movement.swift in Sources */,
 				E8B1F0332BD24A8100EA543E /* TextureController.swift in Sources */,
@@ -381,7 +391,9 @@
 				E8EF09BA2BD0E7FE00FFDA9C /* ContentView.swift in Sources */,
 				E8B1F0222BD1B97D00EA543E /* Vertex.metal in Sources */,
 				E8EF09B82BD0E7FE00FFDA9C /* EngineApp.swift in Sources */,
+				E8E2C8582BF5DE3B002B711B /* ObjecId.metal in Sources */,
 				E8E7BA942BD3F0100039D16D /* SceneLighting.swift in Sources */,
+				E88B3E5E2BF33951007748F6 /* ObjectIdRenderPass.swift in Sources */,
 				E8B1F0132BD1014900EA543E /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

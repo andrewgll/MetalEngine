@@ -77,7 +77,7 @@ class InputController {
 
     func keyJustPressed(_ keyCode: GCKeyCode) -> Bool {
         let isJustPressed = keysJustPressed.contains(keyCode)
-        keysJustPressed.remove(keyCode) // Reset just pressed status after checking
+        keysJustPressed.remove(keyCode)
         return isJustPressed
     }
 

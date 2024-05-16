@@ -20,7 +20,8 @@ fragment float4 fragment_main(
     texture2d<float> roughnessTexture [[texture(RoughnessTexture)]],
     texture2d<float> normalTexture [[texture((NormalTexture))]],
     texture2d<float> metallicTexture [[texture((MetallicTexture))]],
-    texture2d<float> ambientOcclusionTexture [[texture((AOTexture))]]
+    texture2d<float> ambientOcclusionTexture [[texture((AOTexture))]],
+    texture2d<uint> idTexture [[texture(IdTexture)]]
 )
     {
         Material material = _material;
@@ -34,6 +35,13 @@ fragment float4 fragment_main(
             material.baseColor = baseColorTexture.sample(
             textureSampler,
             in.uv * params.tiling).rgb;
+        }
+        if (!is_null_texture(idTexture)) {
+            uint2 coord = uint2(params.touchX * params.scaleFactor, params.touchY * params.scaleFactor);
+            uint objectID = idTexture.read(coord).r;
+            if (params.objectId != 0 && objectID == params.objectId) {
+                material.baseColor = float3(0.9, 0.5, 0);
+            }
         }
         if (!is_null_texture(roughnessTexture)) {
           material.roughness = roughnessTexture.sample(
