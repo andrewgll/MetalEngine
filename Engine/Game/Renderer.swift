@@ -15,9 +15,12 @@ class Renderer: NSObject{
     var uniforms = Uniforms()
     var params = Params()
     
+    var shadowCamera = OrthographicCamera()
+    
     var forwardRenderPass: ForwardRenderPass
     var objectIdRenderPass: ObjectIdRenderPass
-    
+    var shadowRenderPass: ShadowRenderPass
+
     init(metalView: MTKView){
         guard
             let device = MTLCreateSystemDefaultDevice(),
@@ -34,7 +37,8 @@ class Renderer: NSObject{
         
         forwardRenderPass = ForwardRenderPass(view: metalView)
         objectIdRenderPass = ObjectIdRenderPass()
-        
+        shadowRenderPass = ShadowRenderPass()
+
         super.init()
 
         metalView.clearColor = MTLClearColor(
@@ -58,6 +62,8 @@ extension Renderer {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         objectIdRenderPass.resize(view: view, size: size)
         forwardRenderPass.resize(view: view, size: size)
+        shadowRenderPass.resize(view: view, size: size)
+
     }
     func updateUniforms(scene: GameScene){
         uniforms.viewMatrix = scene.camera.viewMatrix
@@ -65,7 +71,17 @@ extension Renderer {
         params.lightCount = UInt32(scene.lighting.lights.count)
         params.timer = Float(sin(scene.timer))
         params.cameraPosition = scene.camera.position
-        
+        let sun = scene.lighting.lights[0]
+        shadowCamera = OrthographicCamera.createShadowCamera(
+          using: scene.camera,
+          lightPosition: sun.position)
+        uniforms.shadowProjectionMatrix = shadowCamera.projectionMatrix
+        uniforms.shadowViewMatrix = float4x4(
+          eye: shadowCamera.position,
+          center: shadowCamera.center,
+          up: [0, 1, 0])
+
+
     }
     func draw(scene: GameScene, in view: MTKView) {
         guard
@@ -73,16 +89,15 @@ extension Renderer {
             let descriptor = view.currentRenderPassDescriptor else {
             return
         }
-        
+
         updateUniforms(scene: scene)
-        objectIdRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
         forwardRenderPass.descriptor = descriptor
-        forwardRenderPass.draw(
-            commandBuffer: commandBuffer,
-            scene: scene,
-            uniforms: uniforms,
-            params: params)
-        forwardRenderPass.idTexture = objectIdRenderPass.idTexture
+
+        shadowRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
+        
+        forwardRenderPass.shadowTexture = shadowRenderPass.shadowTexture
+        forwardRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
+
         guard let drawable = view.currentDrawable else {
             return
         }
