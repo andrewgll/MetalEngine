@@ -1,3 +1,7 @@
+**Metal Engine** <br />
+So, this is a very raw version of my own 3D game engine written entirely from scratch. It uses Swift+Metal API. I'm working on it in my free time. <br />
+This is my playground for my future diploma thesis where I want to investigate the 3D mesh generation. <br />
+
 
 **UPDATE 0.3**
 * Added Item selection
@@ -18,5 +22,13 @@ ___
 ___
 
 **UPDATE 0.1** <br />
-So, this is a very raw version of my own 3D game engine written entirely from scratch. It uses Swift+Metal API. Currently, it supports usdz files and can work with multiple 3d objects, textures, materials, perspective, WASD motion, complex objects, shading. This is my playground for my future diploma thesis where I want to investigate the 3D mesh generation.<br />
+* Usdz files support
+* work with multiple 3d objects 
+* basic albedo textures
+* perspective
+* WASD input
+* complex objects
+* shading
+* Arcball/FP camera
+* And many many more initial things
 <img src="https://i.ibb.co/NSyH956/image.jpg" width="500">
