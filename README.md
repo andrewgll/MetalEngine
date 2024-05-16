@@ -4,6 +4,7 @@ This is my playground for my future diploma thesis where I want to investigate t
 
 **UPDATE 0.3.1**
 * Added Shadows(With some limits...)
+* Orthographic camera
 <img src="https://i.ibb.co/Bt8qKDw/2b99183f-00fe-4e5d-bc62-9b3ff0d6f8b3.jpg" width="500">
 
 
@@ -26,8 +27,10 @@ ___
 ___
 
 **UPDATE 0.1** <br />
+* Render 3D objects from poligons
 * Usdz files support
-* work with multiple 3d objects 
+* Game Scene
+* multiple 3d objects 
 * basic albedo textures
 * perspective
 * WASD input
