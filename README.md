@@ -2,6 +2,10 @@
 So, this is a very raw version of my own 3D game engine written entirely from scratch. It uses Swift+Metal API. I'm working on it in my free time. <br />
 This is my playground for my future diploma thesis where I want to investigate the 3D mesh generation. <br />
 
+**UPDATE 0.3.1**
+* Added Shadows(With some limits...)
+<img src="https://i.ibb.co/Bt8qKDw/2b99183f-00fe-4e5d-bc62-9b3ff0d6f8b3.jpg" width="500">
+
 
 **UPDATE 0.3**
 * Added Item selection
