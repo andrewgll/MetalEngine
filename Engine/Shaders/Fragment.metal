@@ -21,7 +21,8 @@ fragment float4 fragment_main(
     texture2d<float> normalTexture [[texture((NormalTexture))]],
     texture2d<float> metallicTexture [[texture((MetallicTexture))]],
     texture2d<float> ambientOcclusionTexture [[texture((AOTexture))]],
-    texture2d<uint> idTexture [[texture(IdTexture)]]
+    texture2d<uint> idTexture [[texture(IdTexture)]],
+    depth2d<float> shadowTexture [[texture(ShadowTexture)]]
 )
     {
         Material material = _material;
@@ -76,5 +77,18 @@ fragment float4 fragment_main(
         float3 diffuseColor = computeDiffuse(lights, params, material, normal);
         float3 specularColor = computeSpecular(lights, params, material, normal);
 
+        float3 shadowPosition = in.shadowPosition.xyz / in.shadowPosition.w;
+        float2 xy = shadowPosition.xy;
+        xy = xy * 0.5 + 0.5;
+        xy.y = 1 - xy.y;
+        xy = saturate(xy);
+        
+        constexpr sampler s(coord::normalized, filter::linear, address::clamp_to_edge, compare_func::less);
+        float shadow_sample = shadowTexture.sample(s, xy);
+        
+        if (shadowPosition.z > shadow_sample + 0.001) {
+           diffuseColor *= 0.5;
+        }
+        
         return float4(diffuseColor + specularColor, 1);
 }

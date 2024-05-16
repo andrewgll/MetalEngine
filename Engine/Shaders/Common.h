@@ -16,7 +16,8 @@ typedef enum {
     RoughnessTexture = 2,
     MetallicTexture = 3,
     AOTexture = 4,
-    IdTexture = 11
+    IdTexture = 11,
+    ShadowTexture = 15
 } TextureIndices;
 
 typedef struct {
@@ -24,6 +25,8 @@ typedef struct {
     matrix_float4x4 viewMatrix;
     matrix_float4x4 projectionMatrix;
     matrix_float3x3 normalMatrix;
+    matrix_float4x4 shadowProjectionMatrix;
+    matrix_float4x4 shadowViewMatrix;
     float timer;
 } Uniforms;
 

@@ -15,6 +15,7 @@ struct ForwardRenderPass: RenderPass {
     let depthStencilState: MTLDepthStencilState?
     
     weak var idTexture: MTLTexture?
+    weak var shadowTexture: MTLTexture?
     
     init(view: MTKView) {
         pipelineState = PipelineStates.createForwardPSO(colorPixelFormat: view.colorPixelFormat)
@@ -36,6 +37,7 @@ struct ForwardRenderPass: RenderPass {
         var lights = scene.lighting.lights
         renderEncoder.setFragmentBytes(&lights, length: MemoryLayout<Light>.stride * lights.count, index: LightBuffer.index )
         renderEncoder.setFragmentTexture(idTexture, index: IdTexture.index)
+        renderEncoder.setFragmentTexture(shadowTexture, index: ShadowTexture.index)
         let input = InputController.shared
         var params = params
         params.touchX = UInt32(input.touchLocation?.x ?? 0)

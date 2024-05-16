@@ -8,8 +8,8 @@ class InputController {
     }
     
     static let shared = InputController()
-    private var keysPressed: Set<GCKeyCode> = []
-    private var keysJustPressed: Set<GCKeyCode> = []
+    var keysPressed: Set<GCKeyCode> = []
+    var keysJustPressed: Set<GCKeyCode> = []
 
     var leftMouseDown = false
     var mouseDelta = Point.zero

@@ -19,7 +19,7 @@ protocol RenderPass {
     )
 }
 
-extension RenderPass{
+extension RenderPass {
     static func buildDepthStencilState() -> MTLDepthStencilState? {
         let descriptor = MTLDepthStencilDescriptor()
         descriptor.depthCompareFunction = .less

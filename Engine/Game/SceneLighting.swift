@@ -48,7 +48,7 @@ struct SceneLighting {
     }()
     
     init(){
-        lights = [sunLight, ambientLight, fillLight]
+        lights = [sunLight]
     }
     static func buildDefaultLight() -> Light {
         var light = Light()
