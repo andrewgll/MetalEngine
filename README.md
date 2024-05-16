@@ -7,6 +7,7 @@ This is my playground for my future diploma thesis where I want to investigate t
 * Orthographic camera
 <img src="https://i.ibb.co/Bt8qKDw/2b99183f-00fe-4e5d-bc62-9b3ff0d6f8b3.jpg" width="500">
 
+___
 
 **UPDATE 0.3**
 * Object selection
